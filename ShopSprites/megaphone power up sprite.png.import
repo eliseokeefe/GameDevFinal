@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch54s6jyplgkr"
-path="res://.godot/imported/MainPlayer.png-3b16922ed08c06fe7245dd93a57e5b57.ctex"
+uid="uid://cufu3t1d1orx4"
+path="res://.godot/imported/megaphone power up sprite.png-abfcab8c7cb99b6054e1acf5636dc4a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/MainPlayer.png"
-dest_files=["res://.godot/imported/MainPlayer.png-3b16922ed08c06fe7245dd93a57e5b57.ctex"]
+source_file="res://ShopSprites/megaphone power up sprite.png"
+dest_files=["res://.godot/imported/megaphone power up sprite.png-abfcab8c7cb99b6054e1acf5636dc4a8.ctex"]
 
 [params]
 

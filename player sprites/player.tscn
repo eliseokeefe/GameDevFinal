@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dmfir52chnwk"]
 
-[ext_resource type="Texture2D" uid="uid://ch54s6jyplgkr" path="res://sprites/MainPlayer.png" id="1_h7nex"]
+[ext_resource type="Texture2D" uid="uid://ch54s6jyplgkr" path="res://player sprites/MainPlayer.png" id="1_h7nex"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_28s5c"]
 atlas = ExtResource("1_h7nex")
@@ -65,11 +65,11 @@ radius = 4.0
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+modulate = Color(1, 1, 0, 1)
 position = Vector2(1, -3)
 sprite_frames = SubResource("SpriteFrames_fokbd")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.649616
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(1, 3)
