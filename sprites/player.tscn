@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://dmfir52chnwk"]
+
+[ext_resource type="Texture2D" uid="uid://ch54s6jyplgkr" path="res://sprites/MainPlayer.png" id="1_h7nex"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28s5c"]
+atlas = ExtResource("1_h7nex")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h3u6"]
+atlas = ExtResource("1_h7nex")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmkfl"]
+atlas = ExtResource("1_h7nex")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7i4s"]
+atlas = ExtResource("1_h7nex")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q22j2"]
+atlas = ExtResource("1_h7nex")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih74a"]
+atlas = ExtResource("1_h7nex")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fokbd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28s5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h3u6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmkfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7i4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q22j2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih74a")
+}],
+"loop": true,
+"name": &"w-forward",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lafsw"]
+radius = 4.0
+
+[node name="player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -3)
+sprite_frames = SubResource("SpriteFrames_fokbd")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.649616
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1, 3)
+shape = SubResource("CircleShape2D_lafsw")
