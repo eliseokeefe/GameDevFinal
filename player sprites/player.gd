@@ -4,11 +4,11 @@ var speed = 100
 var cooldown = true 
 var speech = preload("res://player sprites/speech.tscn")
 
-#var megaphone = preload("res://player sprites/megaphone power up sprite.png")
-#var newspaper = preload("res://player sprites/IMG_8149.PNG")
-#var phone = preload("res://player sprites/IMG_8159.PNG")
+var megaphone = preload("res://ShopSprites/megaphone power up sprite.png")
+var newspaper = preload("res://ShopSprites/newspaper sprite.png")
+var phone = preload("res://ShopSprites/phone power up.png") 
 
-var currentSPeech = speech;
+var currentSpeech = speech;
 
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -34,7 +34,7 @@ func _physics_process(delta):
 	
 func shoot():
 		cooldown = false 
-		var newSpeech = currentSPeech.instantiate()
+		var newSpeech = currentSpeech.instantiate()
 		get_parent().add_child(newSpeech)
 		var mouse_pos = get_global_mouse_position()
 		newSpeech.direction = mouse_pos - global_position 
@@ -45,15 +45,14 @@ func shoot():
 		cooldown = true 
 
 func _on_shop_gui_newspaper():
-	#currentSpeech = newspaper.instantiate() 
-	pass
+	currentSpeech = newspaper.instantiate() 
 
 func _on_shop_gui_phone():
-	#powerup = phone.instantiate() 
-	pass
+	currentSpeech = phone.instantiate() 
+
 	
 func _on_shop_gui_megaphone():
-	pass 
+	currentSpeech = megaphone.instantiate() 
 
 
 

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2yrwf7lemnop"]
+
+[ext_resource type="Script" path="res://newspaper.gd" id="1_lltu0"]
+[ext_resource type="Texture2D" uid="uid://b3f3ex1k604r2" path="res://ShopSprites/newspaper sprite.png" id="2_5s1c4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fg0qo"]
+size = Vector2(82, 51)
+
+[node name="newspaper" type="Area2D"]
+script = ExtResource("1_lltu0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_5s1c4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_fg0qo")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(23, -0.5)
+scale = Vector2(0.6, 2.05)

@@ -1,8 +1,8 @@
 extends Area2D
 
-var speed = 200 #can be changed
-var damage = 10 
 
+var speed = 350 #can be changed
+var damage = 50 
 var direction: Vector2 
 
 	
@@ -25,4 +25,3 @@ func _process(delta):
 		
 	position += (direction.normalized() *speed) * delta
 	
-
