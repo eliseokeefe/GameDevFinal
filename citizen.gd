@@ -19,9 +19,9 @@ func change_mind():
 	convinced = true
 	$AnimatedSprite2D.modulate = Color(1, 1, 0)
 
-func _on_hurt_box_body_entered(body):
-	if body.is_in_group("projectiles"):
-		change_mind()
-
 func _on_timer_timeout():
 	queue_free()
+
+func _on_hurt_box_area_entered(area):
+	if area.is_in_group("projectiles"):
+		change_mind()
