@@ -12,12 +12,14 @@ func _process(delta):
 
 
 func _on_megaphone_button_pressed():
-	pass # Replace with function body.
+	$MegaphoneButton.disabled = true 
+	
 
 
 func _on_newspaper_button_pressed():
-	pass # Replace with function body.
+	$NewspaperButton.disabled = true
 
 
 func _on_phone_button_pressed():
-	pass # Replace with function body.
+	$PhoneButton.disabled = true
+	
