@@ -1,5 +1,8 @@
 extends CanvasLayer
-
+@onready var open := false 
+signal megaphone 
+signal newspaper 
+signal phone
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,14 +15,16 @@ func _process(delta):
 
 
 func _on_megaphone_button_pressed():
-	$MegaphoneButton.disabled = true 
+	$MegaphoneButton.disabled = true  
+	megaphone.emit()
 	
 
 
 func _on_newspaper_button_pressed():
-	$NewspaperButton.disabled = true
+	$NewspaperButton.disabled = true 
+	newspaper.emit()
 
 
 func _on_phone_button_pressed():
 	$PhoneButton.disabled = true
-	
+	phone.emit()
