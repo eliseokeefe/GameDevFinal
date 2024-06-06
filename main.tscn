@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1ottidjlyq6f"]
+[gd_scene load_steps=4 format=3 uid="uid://b1ottidjlyq6f"]
 
 [ext_resource type="PackedScene" uid="uid://cgdw72a4sk4g7" path="res://background.tscn" id="1_kagpp"]
 [ext_resource type="PackedScene" uid="uid://dpr1nnm12irux" path="res://player sprites/player.tscn" id="1_xiauq"]
+[ext_resource type="PackedScene" uid="uid://diwmkx3xr50ls" path="res://citizen_spawner.tscn" id="3_6htow"]
 
 [node name="main" type="Node2D"]
+y_sort_enabled = true
 position = Vector2(151, -118)
+
+[node name="Citizen_Spawner" parent="." instance=ExtResource("3_6htow")]
 
 [node name="player" parent="." instance=ExtResource("1_xiauq")]
 position = Vector2(-294, 208)

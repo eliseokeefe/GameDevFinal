@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://diwmkx3xr50ls"]
+
+[ext_resource type="Script" path="res://citizen_spawner.gd" id="1_n5ftk"]
+[ext_resource type="PackedScene" uid="uid://cnltk2peqca7t" path="res://citizen.tscn" id="2_fn2ho"]
+
+[node name="Citizen_Spawner" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_n5ftk")
+citizen = ExtResource("2_fn2ho")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

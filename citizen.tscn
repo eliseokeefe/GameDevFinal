@@ -3,36 +3,36 @@
 [ext_resource type="Script" path="res://citizen.gd" id="1_xaaph"]
 [ext_resource type="Texture2D" uid="uid://ch54s6jyplgkr" path="res://player sprites/MainPlayer.png" id="2_h7euu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_elatp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xskbv"]
 atlas = ExtResource("2_h7euu")
-region = Rect2(0, 24, 24, 24)
+region = Rect2(0, 25, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xkg4l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0luq4"]
 atlas = ExtResource("2_h7euu")
-region = Rect2(24, 24, 24, 24)
+region = Rect2(24, 25, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j8f3j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jhdy"]
 atlas = ExtResource("2_h7euu")
-region = Rect2(48, 24, 24, 24)
+region = Rect2(48, 25, 24, 25)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_34src"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiy5t"]
 atlas = ExtResource("2_h7euu")
-region = Rect2(72, 24, 24, 24)
+region = Rect2(72, 25, 24, 25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_d4n2o"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_elatp")
+"texture": SubResource("AtlasTexture_xskbv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xkg4l")
+"texture": SubResource("AtlasTexture_0luq4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j8f3j")
+"texture": SubResource("AtlasTexture_3jhdy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_34src")
+"texture": SubResource("AtlasTexture_hiy5t")
 }],
 "loop": true,
 "name": &"default",
@@ -44,16 +44,32 @@ radius = 4.0
 height = 16.0
 
 [node name="Citizen" type="CharacterBody2D"]
-position = Vector2(0, -12)
+y_sort_enabled = true
+position = Vector2(0, -16)
+scale = Vector2(1.6, 1.6)
 script = ExtResource("1_xaaph")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_d4n2o")
 autoplay = "default"
-frame_progress = 0.865859
+frame_progress = 0.760816
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_3dp5k")
+disabled = true
+
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="HurtCollision" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_3dp5k")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 45.0
+one_shot = true
+autostart = true
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
