@@ -5,7 +5,7 @@ signal phone
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,7 +29,8 @@ func _on_phone_button_pressed():
 	phone.emit()
 
 
-func _on_in_game_hud_shop_pressed():
+func _on_in_game_hud_shop_pressed(): 
+	print("hi")
 	show()
 
 
