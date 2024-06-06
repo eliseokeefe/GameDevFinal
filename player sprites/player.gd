@@ -39,8 +39,6 @@ func shoot():
 		var mouse_pos = get_global_mouse_position()
 		newSpeech.direction = mouse_pos - global_position 
 		newSpeech.global_position = global_position 
-		#newSpeech.global_position = $Marker2D.global_position
-		
 		await get_tree().create_timer(0.4).timeout
 		cooldown = true 
 
@@ -50,7 +48,6 @@ func _on_shop_gui_newspaper():
 func _on_shop_gui_phone():
 	currentSpeech = phone.instantiate() 
 
-	
 func _on_shop_gui_megaphone():
 	currentSpeech = megaphone.instantiate() 
 

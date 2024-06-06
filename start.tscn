@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bofqvgiranpac"]
+[gd_scene load_steps=5 format=3 uid="uid://bofqvgiranpac"]
 
 [ext_resource type="Script" path="res://Start.gd" id="1_jyfeq"]
+[ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="2_0r0w8"]
 [ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://start+stop sprites/Screenshot 2024-06-06 at 4.39.24 PM.png" id="2_gmaxi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h671r"]
@@ -27,16 +28,21 @@ offset_left = 0.287979
 offset_top = -14.28
 offset_right = 0.271988
 offset_bottom = 0.0879731
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("2_0r0w8")
+theme_override_font_sizes/font_size = 33
 text = "START"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 336.0
+offset_left = 243.0
 offset_top = 171.0
-offset_right = 771.0
-offset_bottom = 316.0
-text = "Your goal is to spread your message to as many people as you can. Use your left mouse button to speak and WASD to move around."
+offset_right = 1012.0
+offset_bottom = 357.0
+scale = Vector2(0.75, 0.75)
+theme_override_fonts/font = ExtResource("2_0r0w8")
+text = "Your goal is to spread your message to as many people as you can. 
+
+Use your left mouse button to speak and WASD to move around."
 label_settings = SubResource("LabelSettings_h671r")
 horizontal_alignment = 1
 vertical_alignment = 1
