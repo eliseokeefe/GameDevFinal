@@ -1,0 +1,110 @@
+[gd_scene load_steps=13 format=3 uid="uid://cwbjcwu0uae0b"]
+
+[ext_resource type="Script" path="res://in_game_hud.gd" id="1_4q6an"]
+[ext_resource type="Texture2D" uid="uid://ctxu1l8it3f4c" path="res://ShopSprites/coin2_20x20.png" id="2_4d1ei"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20wx7"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irjof"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doaus"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oalsk"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u81s"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(80, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6phhy"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(100, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hji5"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(120, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62pqw"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(140, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id7c1"]
+atlas = ExtResource("2_4d1ei")
+region = Rect2(160, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5oynm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20wx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irjof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doaus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oalsk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u81s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6phhy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hji5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62pqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_id7c1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[node name="InGameHUD" type="CanvasLayer"]
+script = ExtResource("1_4q6an")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TImerLabel" type="Label" parent="."]
+offset_left = 561.0
+offset_top = 622.0
+offset_right = 606.0
+offset_bottom = 645.0
+text = "0:00
+"
+
+[node name="ShopButton" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 86.0
+offset_bottom = 84.0
+flat = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(46, 40.625)
+scale = Vector2(4.2, 3.8375)
+sprite_frames = SubResource("SpriteFrames_5oynm")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.565883
+
+[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
