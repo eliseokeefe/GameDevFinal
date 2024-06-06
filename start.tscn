@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bofqvgiranpac"]
 
 [ext_resource type="Script" path="res://Start.gd" id="1_jyfeq"]
-[ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://Screenshot 2024-06-06 at 4.39.24 PM.png" id="2_gmaxi"]
+[ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://start+stop sprites/Screenshot 2024-06-06 at 4.39.24 PM.png" id="2_gmaxi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h671r"]
 font_size = 24
@@ -44,7 +44,7 @@ autowrap_mode = 2
 
 [node name="Screenshot2024-06-06At4_39_24 pm" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(573.5, 323.5)
+position = Vector2(574, 324)
 scale = Vector2(1.00437, 1.03016)
 texture = ExtResource("2_gmaxi")
 

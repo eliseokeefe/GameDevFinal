@@ -13,7 +13,7 @@ position = Vector2(151, -118)
 [node name="Citizen_Spawner" parent="." instance=ExtResource("3_6htow")]
 
 [node name="player" parent="." instance=ExtResource("1_xiauq")]
-position = Vector2(-294, 208)
+position = Vector2(-292, 210)
 
 [node name="background" parent="." instance=ExtResource("1_kagpp")]
 z_index = -1
