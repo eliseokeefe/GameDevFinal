@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://bofqvgiranpac"]
+
+[ext_resource type="Script" path="res://Start.gd" id="1_jyfeq"]
+[ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://Screenshot 2024-06-06 at 4.39.24 PM.png" id="2_gmaxi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h671r"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jyfeq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.406
+anchor_top = 0.61
+anchor_right = 0.564
+anchor_bottom = 0.719
+offset_left = 0.287979
+offset_top = -14.28
+offset_right = 0.271988
+offset_bottom = 0.0879731
+theme_override_font_sizes/font_size = 36
+text = "START"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 171.0
+offset_right = 771.0
+offset_bottom = 316.0
+text = "Your goal is to spread your message to as many people as you can. Use your left mouse button to speak and WASD to move around."
+label_settings = SubResource("LabelSettings_h671r")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Screenshot2024-06-06At4_39_24 pm" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(573.5, 323.5)
+scale = Vector2(1.00437, 1.03016)
+texture = ExtResource("2_gmaxi")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
