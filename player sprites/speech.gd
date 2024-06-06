@@ -3,7 +3,6 @@ extends Area2D
 var speed = 300 #can be changed
 
 func _ready():
-	add_to_group("projectiles")
 	set_as_top_level(true)
 	
 func _process(delta):
