@@ -74,11 +74,11 @@ animation = &"walk"
 frame_progress = 0.101503
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 2)
+position = Vector2(-1, -5)
 shape = SubResource("CircleShape2D_t63jj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-2, 2)
+position = Vector2(-1, -5)
 zoom = Vector2(1.5, 1.5)
 limit_left = -445
 limit_top = -537
