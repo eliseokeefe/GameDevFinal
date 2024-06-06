@@ -17,68 +17,69 @@
 script = ExtResource("1_37cko")
 
 [node name="Background" type="Sprite2D" parent="."]
+position = Vector2(557, 307.5)
 texture = ExtResource("1_74g6o")
 metadata/_edit_group_ = true
 
 [node name="Shopfont" type="Sprite2D" parent="."]
-position = Vector2(-3, -171)
+position = Vector2(554, 136.5)
 texture = ExtResource("2_u0j3d")
 metadata/_edit_group_ = true
 
 [node name="MegaphoneButton" type="Button" parent="."]
-offset_left = -283.0
-offset_top = -57.0
-offset_right = -121.0
-offset_bottom = 69.0
+offset_left = 274.0
+offset_top = 250.5
+offset_right = 436.0
+offset_bottom = 376.5
 icon = ExtResource("5_8krbn")
 flat = true
 expand_icon = true
 
 [node name="NewspaperButton" type="Button" parent="."]
-offset_left = -85.0
-offset_top = -72.0
-offset_right = 86.0
-offset_bottom = 83.0
+offset_left = 472.0
+offset_top = 235.5
+offset_right = 643.0
+offset_bottom = 390.5
 icon = ExtResource("3_idmgu")
 flat = true
 expand_icon = true
 
 [node name="PhoneButton" type="Button" parent="."]
-offset_left = 161.0
-offset_top = -75.0
-offset_right = 275.0
-offset_bottom = 81.0
+offset_left = 718.0
+offset_top = 232.5
+offset_right = 832.0
+offset_bottom = 388.5
 icon = ExtResource("4_yu4u5")
 flat = true
 expand_icon = true
 
 [node name="MegaphoneText" type="Sprite2D" parent="."]
-position = Vector2(-208, 105)
+position = Vector2(349, 412.5)
 scale = Vector2(0.347118, 0.424242)
 texture = ExtResource("7_5j6la")
 
 [node name="LocalnewsText" type="Sprite2D" parent="."]
-position = Vector2(4, 104)
+position = Vector2(561, 411.5)
 scale = Vector2(0.327825, 0.325758)
 texture = ExtResource("8_3025p")
 
 [node name="SocialMediaText" type="Sprite2D" parent="."]
-position = Vector2(216, 107)
+position = Vector2(773, 414.5)
 scale = Vector2(0.30303, 0.348485)
 texture = ExtResource("9_3jmd3")
 
 [node name="1Kpts" type="Sprite2D" parent="."]
-position = Vector2(-213, 161)
+position = Vector2(344, 468.5)
 scale = Vector2(0.527322, 0.515152)
 texture = ExtResource("10_gdy2j")
 
 [node name="50Kpts" type="Sprite2D" parent="."]
-position = Vector2(0, 162)
+position = Vector2(557, 469.5)
 scale = Vector2(0.532258, 0.5)
 texture = ExtResource("11_mdj7h")
 
 [node name="100Kpts" type="Sprite2D" parent="."]
-position = Vector2(215, 161)
+position = Vector2(772, 468.5)
 scale = Vector2(0.465157, 0.484848)
 texture = ExtResource("12_jvg70")
 
