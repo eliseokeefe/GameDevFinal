@@ -56,4 +56,11 @@ frame_progress = 0.865859
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_3dp5k")
 
+[node name="HurtBox" type="Area2D" parent="."]
+
+[node name="HurtCollision" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_3dp5k")
+
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="body_entered" from="HurtBox" to="." method="_on_hurt_box_body_entered"]
