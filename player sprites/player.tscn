@@ -62,27 +62,29 @@ animations = [{
 radius = 6.32456
 
 [node name="player" type="CharacterBody2D"]
+position = Vector2(11, 3)
 script = ExtResource("1_o6kd1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)
-position = Vector2(172, -8)
+position = Vector2(-1, -10)
 scale = Vector2(1.54167, 1.75)
 sprite_frames = SubResource("SpriteFrames_tbp2q")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(171, 1)
+position = Vector2(-1, 2)
 shape = SubResource("CircleShape2D_t63jj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(47, -11)
+position = Vector2(-2, 2)
 zoom = Vector2(1.5, 1.5)
-limit_left = -425
+limit_left = -445
 limit_top = -537
-limit_right = 1471
+limit_right = 1070
 limit_bottom = 210
 limit_smoothed = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
+visible = false
 position = Vector2(174, -1)
