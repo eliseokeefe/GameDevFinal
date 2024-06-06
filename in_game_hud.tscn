@@ -78,18 +78,22 @@ animations = [{
 script = ExtResource("1_4q6an")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 300.0
+autostart = true
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 6.0
+offset_top = 584.0
+offset_right = 181.0
+offset_bottom = 653.0
+theme_override_font_sizes/font_size = 50
+text = "0"
 
-[node name="TImerLabel" type="Label" parent="."]
+[node name="TimerLabel" type="Label" parent="."]
 offset_left = 561.0
 offset_top = 622.0
 offset_right = 606.0
 offset_bottom = 645.0
-text = "0:00
+text = "300
 "
 
 [node name="ShopButton" type="Button" parent="."]
@@ -107,4 +111,5 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.565883
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
