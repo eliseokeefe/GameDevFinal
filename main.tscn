@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cgdw72a4sk4g7" path="res://background.tscn" id="1_kagpp"]
 [ext_resource type="PackedScene" uid="uid://dpr1nnm12irux" path="res://player sprites/player.tscn" id="1_xiauq"]
-[ext_resource type="PackedScene" path="res://citizen_spawner.tscn" id="3_6htow"]
+[ext_resource type="PackedScene" uid="uid://diwmkx3xr50ls" path="res://citizen_spawner.tscn" id="3_6htow"]
 [ext_resource type="PackedScene" uid="uid://durrr3gny344l" path="res://shop_gui.tscn" id="4_bsiwj"]
 [ext_resource type="PackedScene" uid="uid://cwbjcwu0uae0b" path="res://in_game_hud.tscn" id="5_psffl"]
 
