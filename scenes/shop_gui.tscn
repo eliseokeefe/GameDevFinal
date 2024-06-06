@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://durrr3gny344l"]
+
+[ext_resource type="Script" path="res://scripts/shop_gui.gd" id="1_37cko"]
+[ext_resource type="Texture2D" uid="uid://dwj5ut2b8ajp7" path="res://sprites/ShopSprites/white-background.png" id="1_74g6o"]
+[ext_resource type="Texture2D" uid="uid://bpea6xs784e25" path="res://sprites/ShopSprites/shopfont.png" id="2_u0j3d"]
+[ext_resource type="Texture2D" uid="uid://b3f3ex1k604r2" path="res://sprites/ShopSprites/newspaper sprite.png" id="3_idmgu"]
+[ext_resource type="Texture2D" uid="uid://dxhi4ocygtnnw" path="res://sprites/ShopSprites/phone power up.png" id="4_yu4u5"]
+[ext_resource type="Texture2D" uid="uid://cufu3t1d1orx4" path="res://sprites/ShopSprites/megaphone power up sprite.png" id="5_8krbn"]
+[ext_resource type="Texture2D" uid="uid://c2pjn18ney0w2" path="res://sprites/ShopSprites/megaphone text.png" id="7_5j6la"]
+[ext_resource type="Texture2D" uid="uid://ces53fm7mcx2m" path="res://sprites/ShopSprites/localnews text.png" id="8_3025p"]
+[ext_resource type="Texture2D" uid="uid://dqatbjnlk8uq0" path="res://sprites/ShopSprites/social media text.png" id="9_3jmd3"]
+[ext_resource type="Texture2D" uid="uid://da5ywr6akrx2" path="res://sprites/ShopSprites/1Kpts.png" id="10_gdy2j"]
+[ext_resource type="Texture2D" uid="uid://nthipinh1v25" path="res://sprites/ShopSprites/50Kpts.png" id="11_mdj7h"]
+[ext_resource type="Texture2D" uid="uid://caamnf0dfx0av" path="res://sprites/ShopSprites/100Kpts.png" id="12_jvg70"]
+
+[node name="ShopGUI" type="CanvasLayer"]
+script = ExtResource("1_37cko")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(557, 307.5)
+texture = ExtResource("1_74g6o")
+metadata/_edit_group_ = true
+
+[node name="Shopfont" type="Sprite2D" parent="."]
+position = Vector2(554, 136.5)
+texture = ExtResource("2_u0j3d")
+metadata/_edit_group_ = true
+
+[node name="MegaphoneButton" type="Button" parent="."]
+offset_left = 274.0
+offset_top = 250.5
+offset_right = 436.0
+offset_bottom = 376.5
+icon = ExtResource("5_8krbn")
+flat = true
+expand_icon = true
+
+[node name="NewspaperButton" type="Button" parent="."]
+offset_left = 472.0
+offset_top = 235.5
+offset_right = 643.0
+offset_bottom = 390.5
+icon = ExtResource("3_idmgu")
+flat = true
+expand_icon = true
+
+[node name="PhoneButton" type="Button" parent="."]
+offset_left = 718.0
+offset_top = 232.5
+offset_right = 832.0
+offset_bottom = 388.5
+icon = ExtResource("4_yu4u5")
+flat = true
+expand_icon = true
+
+[node name="MegaphoneText" type="Sprite2D" parent="."]
+position = Vector2(349, 412.5)
+scale = Vector2(0.347118, 0.424242)
+texture = ExtResource("7_5j6la")
+
+[node name="LocalnewsText" type="Sprite2D" parent="."]
+position = Vector2(561, 411.5)
+scale = Vector2(0.327825, 0.325758)
+texture = ExtResource("8_3025p")
+
+[node name="SocialMediaText" type="Sprite2D" parent="."]
+position = Vector2(773, 414.5)
+scale = Vector2(0.30303, 0.348485)
+texture = ExtResource("9_3jmd3")
+
+[node name="1Kpts" type="Sprite2D" parent="."]
+position = Vector2(344, 468.5)
+scale = Vector2(0.527322, 0.515152)
+texture = ExtResource("10_gdy2j")
+
+[node name="50Kpts" type="Sprite2D" parent="."]
+position = Vector2(557, 469.5)
+scale = Vector2(0.532258, 0.5)
+texture = ExtResource("11_mdj7h")
+
+[node name="100Kpts" type="Sprite2D" parent="."]
+position = Vector2(772, 468.5)
+scale = Vector2(0.465157, 0.484848)
+texture = ExtResource("12_jvg70")
+
+[connection signal="pressed" from="MegaphoneButton" to="." method="_on_megaphone_button_pressed"]
+[connection signal="pressed" from="NewspaperButton" to="." method="_on_newspaper_button_pressed"]
+[connection signal="pressed" from="PhoneButton" to="." method="_on_phone_button_pressed"]
