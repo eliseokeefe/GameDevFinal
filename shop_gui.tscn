@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://durrr3gny344l"]
+[gd_scene load_steps=7 format=3 uid="uid://durrr3gny344l"]
 
-[ext_resource type="Texture2D" uid="uid://dwj5ut2b8ajp7" path="res://Sprites/white-background.png" id="1_74g6o"]
-[ext_resource type="Texture2D" uid="uid://bpea6xs784e25" path="res://Sprites/shopfont.png" id="2_u0j3d"]
-[ext_resource type="Texture2D" uid="uid://b3f3ex1k604r2" path="res://Sprites/newspaper sprite.png" id="3_idmgu"]
-[ext_resource type="Texture2D" uid="uid://dxhi4ocygtnnw" path="res://Sprites/phone power up.png" id="4_yu4u5"]
-[ext_resource type="Texture2D" uid="uid://cufu3t1d1orx4" path="res://Sprites/megaphone power up sprite.png" id="5_8krbn"]
+[ext_resource type="Script" path="res://shop_gui.gd" id="1_37cko"]
+[ext_resource type="Texture2D" uid="uid://dwj5ut2b8ajp7" path="res://ShopSprites/white-background.png" id="1_74g6o"]
+[ext_resource type="Texture2D" uid="uid://bpea6xs784e25" path="res://ShopSprites/shopfont.png" id="2_u0j3d"]
+[ext_resource type="Texture2D" uid="uid://b3f3ex1k604r2" path="res://ShopSprites/newspaper sprite.png" id="3_idmgu"]
+[ext_resource type="Texture2D" uid="uid://dxhi4ocygtnnw" path="res://ShopSprites/phone power up.png" id="4_yu4u5"]
+[ext_resource type="Texture2D" uid="uid://cufu3t1d1orx4" path="res://ShopSprites/megaphone power up sprite.png" id="5_8krbn"]
 
 [node name="ShopGUI" type="CanvasLayer"]
+script = ExtResource("1_37cko")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_74g6o")
@@ -17,19 +19,33 @@ position = Vector2(-3, -171)
 texture = ExtResource("2_u0j3d")
 metadata/_edit_group_ = true
 
-[node name="NewspaperSprite" type="Sprite2D" parent="."]
-position = Vector2(-4.99999, -1.00003)
-scale = Vector2(0.197674, 0.205637)
-texture = ExtResource("3_idmgu")
-metadata/_edit_group_ = true
+[node name="MegaphoneButton" type="Button" parent="."]
+offset_left = -283.0
+offset_top = -57.0
+offset_right = -121.0
+offset_bottom = 69.0
+icon = ExtResource("5_8krbn")
+flat = true
+expand_icon = true
 
-[node name="PhonePowerUp" type="Sprite2D" parent="."]
-position = Vector2(196, 0)
-scale = Vector2(0.122772, 0.13441)
-texture = ExtResource("4_yu4u5")
-metadata/_edit_group_ = true
+[node name="NewspaperButton" type="Button" parent="."]
+offset_left = -85.0
+offset_top = -72.0
+offset_right = 86.0
+offset_bottom = 83.0
+icon = ExtResource("3_idmgu")
+flat = true
+expand_icon = true
 
-[node name="MegaphonePowerUpSprite" type="Sprite2D" parent="."]
-position = Vector2(-200, -0.999996)
-scale = Vector2(0.675258, 0.6)
-texture = ExtResource("5_8krbn")
+[node name="PhoneButton" type="Button" parent="."]
+offset_left = 161.0
+offset_top = -75.0
+offset_right = 275.0
+offset_bottom = 81.0
+icon = ExtResource("4_yu4u5")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="MegaphoneButton" to="." method="_on_megaphone_button_pressed"]
+[connection signal="pressed" from="NewspaperButton" to="." method="_on_newspaper_button_pressed"]
+[connection signal="pressed" from="PhoneButton" to="." method="_on_phone_button_pressed"]
