@@ -13,7 +13,7 @@ func _physics_process(delta):
 
 func change_mind():
 	convinced = true
-	$AnimatedSprite2D.modulate = Color(1, 0, 0)
+	$AnimatedSprite2D.modulate = Color(1, 1, 0)
 
 func _on_hurt_box_body_entered(body):
 	if body.is_in_group("projectiles"):
