@@ -23,6 +23,7 @@ scale = Vector2(1.0035, 1.0254)
 texture = ExtResource("1_lgfsw")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 243.0
 offset_top = 175.0
 offset_right = 1012.0
