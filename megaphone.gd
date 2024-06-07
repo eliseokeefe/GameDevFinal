@@ -1,7 +1,7 @@
 extends Area2D
 
 var speed = 250 #can be changed
-var damage = 25 
+var damage = 30
 var direction: Vector2 
 
 func _on_visible_on_screen_enabler_2d_screen_exited():
