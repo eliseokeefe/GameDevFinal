@@ -5,6 +5,7 @@ extends Node
 @onready var timer : Timer = $Timer
 var citizen_side = -1
 var rng = RandomNumberGenerator.new()
+signal change_score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +16,7 @@ func _on_timer_timeout():
 	citizen_side = citizen_side * -1
 	var instance = citizen.instantiate()
 	get_parent().add_child(instance)
+	instance.mind_changed.connect(_on_mind_changed)
 	if citizen_side > 0:
 		instance.position = Vector2(-600,rng.randi_range(-120, 275))
 	else:
@@ -24,6 +26,8 @@ func _on_timer_timeout():
 	spawn_frequency = rng.randi_range(1, 2)
 	timer.start(spawn_frequency)
 
+func _on_mind_changed():
+	change_score.emit()
 
 func _on_in_game_hud_time_up():
 	pass

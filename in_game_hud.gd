@@ -28,3 +28,5 @@ func update_Score():
 	score += 100
 	$ScoreLabel.text = str(score)
 
+func _on_citizen_spawner_change_score():
+	update_Score()
