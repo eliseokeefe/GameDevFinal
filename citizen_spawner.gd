@@ -26,4 +26,4 @@ func _on_timer_timeout():
 
 
 func _on_in_game_hud_time_up():
-	pass # Replace with function body.
+	

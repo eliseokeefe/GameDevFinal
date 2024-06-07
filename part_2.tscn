@@ -7,5 +7,5 @@
 
 [node name="background" parent="." instance=ExtResource("1_cot2a")]
 
-[node name="player2" parent="." instance=ExtResource("2_2nvve")]
-position = Vector2(-398, 191)
+[node name="player" parent="." instance=ExtResource("2_2nvve")]
+position = Vector2(-477, 185)

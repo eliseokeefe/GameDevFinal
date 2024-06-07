@@ -53,4 +53,4 @@ func _on_shop_gui_megaphone():
 
 
 func _on_in_game_hud_time_up():
-	
+	$AnimatedSprite2D.modulate = Color(1, 1, 1)
