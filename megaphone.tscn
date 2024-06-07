@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7p8yetb010al"]
+[gd_scene load_steps=4 format=3 uid="uid://bed2jo0s8ibte"]
 
 [ext_resource type="Script" path="res://megaphone.gd" id="1_jyco5"]
 [ext_resource type="Texture2D" uid="uid://cufu3t1d1orx4" path="res://ShopSprites/megaphone power up sprite.png" id="2_bxyih"]
@@ -20,5 +20,5 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_re7t5")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(4.25, -1)
-scale = Vector2(0.275, 1)
+position = Vector2(0.5, -2)
+scale = Vector2(1.25, 1.1)
