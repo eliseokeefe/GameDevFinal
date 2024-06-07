@@ -106,11 +106,7 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_sbn5i")
 theme_override_font_sizes/font_size = 50
-<<<<<<< HEAD
 text = "120
-=======
-text = "300
->>>>>>> 6f08a5bfd7393215a127e0a73574644feb01af58
 "
 
 [node name="ShopButton" type="Button" parent="."]
@@ -128,5 +124,6 @@ animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.565883
 
+[connection signal="timeUp" from="." to="." method="_on_time_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
