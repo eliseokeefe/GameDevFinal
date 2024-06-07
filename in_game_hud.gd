@@ -1,5 +1,5 @@
 extends CanvasLayer
-@onready var timer := 120 
+@onready var timer := 120
 @onready var score := 0
 signal shopPressed 
 signal timeUp
@@ -19,8 +19,7 @@ func _on_shop_button_pressed():
 
 func _on_timer_timeout():   
 	if timer == 0: 
-		timeUp.emit()  
-		get_tree().change_scene_to_file("res://popup.tscn")
+		timeUp.emit() 
 		return
 	timer -= 1
 	$TimerLabel.text = str(timer) 
