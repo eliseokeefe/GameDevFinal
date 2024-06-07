@@ -52,4 +52,5 @@ func _on_shop_gui_megaphone():
 	currentSpeech = megaphone.instantiate() 
 
 
-
+func _on_in_game_hud_time_up():
+	

@@ -27,3 +27,4 @@ func _on_timer_timeout():
 func update_Score():
 	score += 100
 	$ScoreLabel.text = str(score)
+
