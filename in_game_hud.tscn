@@ -81,18 +81,27 @@ script = ExtResource("1_4q6an")
 autostart = true
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 6.0
-offset_top = 584.0
-offset_right = 181.0
-offset_bottom = 653.0
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -69.0
+offset_right = 175.0
+grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "0"
 
 [node name="TimerLabel" type="Label" parent="."]
-offset_left = 561.0
-offset_top = 622.0
-offset_right = 606.0
-offset_bottom = 645.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.5
+offset_top = -69.0
+offset_right = 43.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
 text = "300
 "
 
