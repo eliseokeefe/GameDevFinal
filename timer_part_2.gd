@@ -16,7 +16,7 @@ func _process(delta):
 func _on_timer_timeout():   
 	if timer == 0: 
 		timeUp.emit() 
-		#func(new_score)
+		get_tree().change_scene_to_file("res://end.tscn")
 		return 
 	timer -= 1
 	$timer_label.text = str(timer) 
