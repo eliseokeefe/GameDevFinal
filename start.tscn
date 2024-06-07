@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://start+stop sprites/Screenshot 2024-06-06 at 4.39.24 PM.png" id="2_gmaxi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h671r"]
-font_size = 24
+font_size = 21
 font_color = Color(0, 0, 0, 1)
 
 [node name="Start" type="Control"]
@@ -35,14 +35,14 @@ text = "START"
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 243.0
-offset_top = 171.0
+offset_top = 175.0
 offset_right = 1012.0
-offset_bottom = 357.0
+offset_bottom = 361.0
 scale = Vector2(0.75, 0.75)
 theme_override_fonts/font = ExtResource("2_0r0w8")
 text = "Your goal is to spread your message to as many people as you can. 
 
-Use your left mouse button to speak and WASD to move around."
+Use your left mouse button to speak and WASD to move around. Click the coin to access the store and level ups!"
 label_settings = SubResource("LabelSettings_h671r")
 horizontal_alignment = 1
 vertical_alignment = 1
