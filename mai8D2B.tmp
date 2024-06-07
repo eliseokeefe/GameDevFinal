@@ -22,7 +22,6 @@ z_index = -1
 
 [node name="ShopGUI" parent="." instance=ExtResource("4_bsiwj")]
 
-[connection signal="change_score" from="Citizen_Spawner" to="InGameHUD" method="_on_citizen_spawner_change_score"]
 [connection signal="shopPressed" from="InGameHUD" to="ShopGUI" method="_on_in_game_hud_shop_pressed"]
 [connection signal="timeUp" from="InGameHUD" to="Citizen_Spawner" method="_on_in_game_hud_time_up"]
 [connection signal="timeUp" from="InGameHUD" to="player" method="_on_in_game_hud_time_up"]

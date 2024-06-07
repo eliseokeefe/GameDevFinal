@@ -3,6 +3,7 @@ extends CharacterBody2D
 var rng = RandomNumberGenerator.new()
 var convinced = false
 var health = 50
+signal mind_changed
 
 func _on_ready():
 	var speed = randf_range(50.0,90.0)
@@ -18,6 +19,7 @@ func go_the_other_direction():
 
 func change_mind():
 	convinced = true
+	mind_changed.emit()
 	$AnimatedSprite2D.modulate = Color(1, 1, 0)
 
 func _on_timer_timeout():
