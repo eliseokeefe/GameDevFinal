@@ -1,8 +1,7 @@
 extends CanvasLayer
-
 @onready var timer := 120
-
-@onready var score := 0
+@onready var score := 0 
+@onready var money := 0
 signal shopPressed 
 signal timeUp
 # Called when the node enters the scene tree for the first time.
@@ -27,8 +26,8 @@ func _on_timer_timeout():
 	$TimerLabel.text = str(timer) 
 
 func update_Score():
-	score += 100
-	ScoreManager.score += 1
+	score += 100 
+	money += 100
 	$ScoreLabel.text = str(score)
 
 func _on_citizen_spawner_change_score():
