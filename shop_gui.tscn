@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cg7badwov3r2k" path="res://ShopSprites/ShopXButton.png" id="13_kgiux"]
 
 [node name="ShopGUI" type="CanvasLayer"]
+process_mode = 2
 script = ExtResource("1_37cko")
 
 [node name="Background" type="Sprite2D" parent="."]

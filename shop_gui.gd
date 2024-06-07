@@ -30,9 +30,10 @@ func _on_phone_button_pressed():
 
 
 func _on_in_game_hud_shop_pressed(): 
-	print("hi")
 	show()
+	get_tree().paused = true
 
 
 func _on_close_button_pressed():
-	hide()
+	hide() 
+	get_tree().paused = false
