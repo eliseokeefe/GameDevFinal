@@ -26,3 +26,6 @@ z_index = -1
 [connection signal="shopPressed" from="InGameHUD" to="ShopGUI" method="_on_in_game_hud_shop_pressed"]
 [connection signal="timeUp" from="InGameHUD" to="Citizen_Spawner" method="_on_in_game_hud_time_up"]
 [connection signal="timeUp" from="InGameHUD" to="player" method="_on_in_game_hud_time_up"]
+[connection signal="megaphone" from="ShopGUI" to="player" method="_on_shop_gui_megaphone"]
+[connection signal="newspaper" from="ShopGUI" to="player" method="_on_shop_gui_newspaper"]
+[connection signal="phone" from="ShopGUI" to="player" method="_on_shop_gui_phone"]

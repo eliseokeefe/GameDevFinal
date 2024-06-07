@@ -3,10 +3,9 @@ extends CharacterBody2D
 var speed = 100 
 var cooldown = true 
 var speech = preload("res://player sprites/speech.tscn")
-
-var megaphone = preload("res://ShopSprites/megaphone power up sprite.png")
-var newspaper = preload("res://ShopSprites/newspaper sprite.png")
-var phone = preload("res://ShopSprites/phone power up.png") 
+var megaphone = preload("res://megaphone.tscn")
+var newspaper = preload("res://newspaper.tscn")
+var phone = preload("res://phone.tscn") 
 
 var currentSpeech = speech;
 
@@ -42,15 +41,19 @@ func shoot():
 		await get_tree().create_timer(0.4).timeout
 		cooldown = true 
 
-func _on_shop_gui_newspaper():
-	currentSpeech = newspaper.instantiate() 
-
-func _on_shop_gui_phone():
-	currentSpeech = phone.instantiate() 
-
-func _on_shop_gui_megaphone():
-	currentSpeech = megaphone.instantiate() 
 
 
 func _on_in_game_hud_time_up():
 	$AnimatedSprite2D.modulate = Color(1, 1, 1)
+
+
+func _on_shop_gui_megaphone():
+	currentSpeech = megaphone 
+
+
+func _on_shop_gui_newspaper():
+	currentSpeech = newspaper
+
+
+func _on_shop_gui_phone():
+	currentSpeech = phone 
