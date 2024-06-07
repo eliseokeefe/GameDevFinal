@@ -71,7 +71,8 @@ position = Vector2(-1, -10)
 scale = Vector2(1.54167, 1.75)
 sprite_frames = SubResource("SpriteFrames_tbp2q")
 animation = &"walk"
-frame_progress = 0.101503
+frame = 2
+frame_progress = 0.513038
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -5)

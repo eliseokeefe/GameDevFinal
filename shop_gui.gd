@@ -34,8 +34,10 @@ func _on_phone_button_pressed():
 
 
 func _on_in_game_hud_shop_pressed(): 
-	show()
-	get_tree().paused = true
+	show() 
+	$MoneyLabel.text = "Donations: " + str(inGameHUD.money)
+	get_tree().paused = true 
+	
 
 
 func _on_close_button_pressed():
