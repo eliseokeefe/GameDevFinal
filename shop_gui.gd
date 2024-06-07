@@ -15,26 +15,26 @@ func _process(delta):
 
 
 func _on_megaphone_button_pressed():  
-	if inGameHUD.score >= 1000:
+	if inGameHUD.score >= 500:
 		$MegaphoneButton.disabled = true  
-		inGameHUD.money -= 1000 
+		inGameHUD.money -= 500 
 		$MoneyLabel.text = "Donations: " + str(inGameHUD.money) 
 		megaphone.emit()
 	
 
 
 func _on_newspaper_button_pressed():  
-	if inGameHUD.score >= 2500:
+	if inGameHUD.score >= 1500:
 		$NewspaperButton.disabled = true  
-		inGameHUD.money -= 2500
+		inGameHUD.money -= 1500
 		$MoneyLabel.text = "Donations: " + str(inGameHUD.money)
 		newspaper.emit()
 
 
 func _on_phone_button_pressed(): 
-	if inGameHUD.score >= 5000:	
+	if inGameHUD.score >= 3000:	
 		$PhoneButton.disabled = true  
-		inGameHUD.money -= 5000
+		inGameHUD.money -= 3000
 		$MoneyLabel.text = "Donations: " + str(inGameHUD.money)
 		phone.emit()
 
