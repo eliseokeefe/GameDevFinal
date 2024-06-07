@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4bg23ag3bd0y"]
+
+[ext_resource type="Script" path="res://popup.gd" id="1_dpcx4"]
+[ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://start+stop sprites/Screenshot 2024-06-06 at 4.39.24 PM.png" id="1_lgfsw"]
+[ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="3_1drl5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gm05k"]
+font_size = 21
+font_color = Color(0, 0, 0, 1)
+
+[node name="popup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dpcx4")
+
+[node name="Screenshot2024-06-06At4_39_24 pm" type="Sprite2D" parent="."]
+position = Vector2(571, 324)
+scale = Vector2(1.0035, 1.0254)
+texture = ExtResource("1_lgfsw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 175.0
+offset_right = 1012.0
+offset_bottom = 361.0
+scale = Vector2(0.75, 0.75)
+theme_override_fonts/font = ExtResource("3_1drl5")
+label_settings = SubResource("LabelSettings_gm05k")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

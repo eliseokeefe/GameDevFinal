@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2yrwf7lemnop"]
+[gd_scene load_steps=4 format=3 uid="uid://jqh3xuux0ytn"]
 
 [ext_resource type="Script" path="res://newspaper.gd" id="1_lltu0"]
 [ext_resource type="Texture2D" uid="uid://b3f3ex1k604r2" path="res://ShopSprites/newspaper sprite.png" id="2_5s1c4"]
