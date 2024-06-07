@@ -28,6 +28,3 @@ func _on_timer_timeout():
 
 func _on_mind_changed():
 	change_score.emit()
-
-func _on_in_game_hud_time_up():
-	pass

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bed2jo0s8ibte"]
+[gd_scene load_steps=4 format=3 uid="uid://b7p8yetb010al"]
 
 [ext_resource type="Script" path="res://megaphone.gd" id="1_jyco5"]
 [ext_resource type="Texture2D" uid="uid://cufu3t1d1orx4" path="res://ShopSprites/megaphone power up sprite.png" id="2_bxyih"]
