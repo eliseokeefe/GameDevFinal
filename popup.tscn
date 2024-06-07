@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4bg23ag3bd0y"]
+[gd_scene load_steps=6 format=3 uid="uid://d4bg23ag3bd0y"]
 
 [ext_resource type="Script" path="res://popup.gd" id="1_dpcx4"]
 [ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://start+stop sprites/Screenshot 2024-06-06 at 4.39.24 PM.png" id="1_lgfsw"]
 [ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="3_1drl5"]
+[ext_resource type="FontFile" uid="uid://d3syh1pojil66" path="res://PressStart2P.ttf" id="4_xvi07"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gm05k"]
 font_size = 21
@@ -36,8 +37,20 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.421
+anchor_top = 0.563
+anchor_right = 0.577
+anchor_bottom = 0.804
+offset_left = 0.00796127
+offset_top = 0.175985
+offset_right = 0.295975
+offset_bottom = 0.00798702
+theme_override_fonts/font = ExtResource("4_xvi07")
+theme_override_font_sizes/font_size = 50
+text = "GO!"
+alignment = 2
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
