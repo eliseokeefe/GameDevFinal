@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://cwbjcwu0uae0b"]
+[gd_scene load_steps=14 format=3 uid="uid://cwbjcwu0uae0b"]
 
 [ext_resource type="Script" path="res://in_game_hud.gd" id="1_4q6an"]
 [ext_resource type="Texture2D" uid="uid://ctxu1l8it3f4c" path="res://ShopSprites/coin2_20x20.png" id="2_4d1ei"]
+[ext_resource type="FontFile" uid="uid://d3syh1pojil66" path="res://PressStart2P.ttf" id="2_sbn5i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20wx7"]
 atlas = ExtResource("2_4d1ei")
@@ -87,6 +88,7 @@ anchor_bottom = 1.0
 offset_top = -69.0
 offset_right = 175.0
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_sbn5i")
 theme_override_font_sizes/font_size = 50
 text = "0"
 
@@ -102,6 +104,7 @@ offset_right = 43.5
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sbn5i")
 theme_override_font_sizes/font_size = 50
 text = "300
 "
