@@ -28,7 +28,8 @@ func _on_timer_timeout():
 
 func update_Score():
 	score += 100 
-	money += 100
+	money += 100 
+	ScoreManager.score += 1
 	$ScoreLabel.text = str(score)
 
 func _on_citizen_spawner_change_score():
