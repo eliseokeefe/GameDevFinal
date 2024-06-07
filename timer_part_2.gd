@@ -21,7 +21,6 @@ func _on_timer_timeout():
 	timer -= 1
 	$timer_label.text = str(timer) 
 
-func update_Score():
-	new_score -= 50
-	
 
+func _on_citizen_spawner_change_score():
+	new_score -= 50 

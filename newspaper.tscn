@@ -7,6 +7,7 @@
 size = Vector2(82, 51)
 
 [node name="newspaper" type="Area2D"]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_lltu0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,5 +19,5 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_fg0qo")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(23, -0.5)
-scale = Vector2(0.6, 2.05)
+position = Vector2(-3.09944e-06, -0.5)
+scale = Vector2(3.5, 2.05)

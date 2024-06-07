@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cgdw72a4sk4g7" path="res://background.tscn" id="1_cot2a"]
 [ext_resource type="PackedScene" uid="uid://dpr1nnm12irux" path="res://player sprites/player.tscn" id="2_2nvve"]
 [ext_resource type="PackedScene" uid="uid://diwmkx3xr50ls" path="res://citizen_spawner.tscn" id="2_28m1b"]
-[ext_resource type="PackedScene" path="res://timer_part_2.tscn" id="4_fgejc"]
+[ext_resource type="PackedScene" uid="uid://c7eivxd5w672l" path="res://timer_part_2.tscn" id="4_fgejc"]
 
 [node name="part_2" type="Node2D"]
 y_sort_enabled = true
@@ -18,3 +18,5 @@ script = ExtResource("1_1bgbl")
 position = Vector2(-477, 185)
 
 [node name="Timer_part_2" parent="." instance=ExtResource("4_fgejc")]
+
+[connection signal="change_score" from="Citizen_Spawner" to="Timer_part_2" method="_on_citizen_spawner_change_score"]
