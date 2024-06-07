@@ -1,5 +1,5 @@
 extends CanvasLayer
-@onready var timer := 300 
+@onready var timer := 300
 @onready var score := 0
 signal shopPressed 
 signal timeUp
@@ -27,5 +27,6 @@ func _on_timer_timeout():
 
 func update_Score():
 	score += 100
+	ScoreManager.score += 1
 	$ScoreLabel.text = str(score)
 
