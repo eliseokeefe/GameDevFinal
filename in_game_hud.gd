@@ -19,7 +19,8 @@ func _on_shop_button_pressed():
 
 func _on_timer_timeout():   
 	if timer == 0: 
-		timeUp.emit() 
+		timeUp.emit()  
+		get_tree().change_scene_to_file("res://popup.tscn")
 		return
 	timer -= 1
 	$TimerLabel.text = str(timer) 
