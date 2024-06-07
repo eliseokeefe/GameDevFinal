@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var rng = RandomNumberGenerator.new()
 var convinced = false
+var health = 50
 
 func _on_ready():
 	var speed = randf_range(50.0,90.0)
@@ -23,5 +24,7 @@ func _on_timer_timeout():
 	queue_free()
 
 func _on_hurt_box_area_entered(area):
-	if area.is_in_group("projectiles"):
-		change_mind()
+	if area.is_in_group("projectiles") and !convinced:
+		health -= area.damage;
+		if health <= 0:
+			change_mind()
