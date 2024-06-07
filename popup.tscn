@@ -23,40 +23,21 @@ scale = Vector2(1.0035, 1.0254)
 texture = ExtResource("1_lgfsw")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.211
-anchor_top = 0.27
-anchor_right = 0.712
-anchor_bottom = 0.485
-offset_left = -0.0720119
-offset_top = 0.039993
-offset_right = 191.776
-offset_bottom = 46.72
+layout_mode = 0
+offset_left = 243.0
+offset_top = 175.0
+offset_right = 1012.0
+offset_bottom = 361.0
 scale = Vector2(0.75, 0.75)
 theme_override_fonts/font = ExtResource("3_1drl5")
-text = "
-"
 label_settings = SubResource("LabelSettings_gm05k")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.391
-anchor_top = 0.588
-anchor_right = 0.582
-anchor_bottom = 0.773
-offset_left = -0.432037
-offset_top = -0.0239997
-offset_right = 0.53598
-offset_bottom = 0.0959601
-theme_override_fonts/font = ExtResource("3_1drl5")
-theme_override_font_sizes/font_size = 60
-text = "GO!"
-alignment = 2
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
-[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
