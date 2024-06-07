@@ -22,13 +22,13 @@ func _on_megaphone_button_pressed():
 
 
 func _on_newspaper_button_pressed():  
-	if inGameHUD.score > 50000:
+	if inGameHUD.score > 2500:
 		$NewspaperButton.disabled = true 
 		newspaper.emit()
 
 
 func _on_phone_button_pressed(): 
-	if inGameHUD.score > 100000:	
+	if inGameHUD.score > 5000:	
 		$PhoneButton.disabled = true
 		phone.emit()
 
