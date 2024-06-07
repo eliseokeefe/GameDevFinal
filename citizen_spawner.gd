@@ -23,3 +23,7 @@ func _on_timer_timeout():
 	# restart timer
 	spawn_frequency = rng.randi_range(1, 2)
 	timer.start(spawn_frequency)
+
+
+func _on_in_game_hud_time_up():
+	pass
