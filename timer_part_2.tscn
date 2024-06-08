@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7eivxd5w672l"]
+[gd_scene load_steps=3 format=3 uid="uid://834ckcedpete"]
 
 [ext_resource type="Script" path="res://timer_part_2.gd" id="1_0poy0"]
 [ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="2_eyxh0"]
@@ -7,6 +7,7 @@
 script = ExtResource("1_0poy0")
 
 [node name="Timer" type="Timer" parent="."]
+autostart = true
 
 [node name="timer_label" type="Label" parent="."]
 anchors_preset = 7
@@ -21,4 +22,6 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_eyxh0")
-text = "0:60"
+text = "60"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
