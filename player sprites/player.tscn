@@ -90,3 +90,6 @@ limit_smoothed = true
 [node name="Marker2D" type="Marker2D" parent="."]
 visible = false
 position = Vector2(174, -1)
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ready" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_ready"]

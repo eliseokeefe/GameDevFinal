@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var timer := 60 
+@onready var timer := 60
 @onready var new_score := 0
 #signal shopPressed 
 signal timeUp
