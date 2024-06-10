@@ -16,8 +16,5 @@ func set_color(color):
 func get_color(): 
 	return spriteColor 
 	
-func get_score_type(): 
-	return score_type
+
 	
-func set_score_type(new):
-	score_type = new
