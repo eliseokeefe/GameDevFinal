@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdk425cj4gxhn"]
+[gd_scene load_steps=4 format=3 uid="uid://cdk425cj4gxhn"]
 
 [ext_resource type="Script" path="res://end.gd" id="1_4daf2"]
 [ext_resource type="FontFile" uid="uid://d3syh1pojil66" path="res://PressStart2P.ttf" id="3_gj05g"]
+[ext_resource type="Texture2D" uid="uid://cq8cly42igcne" path="res://title.png" id="3_rjy4x"]
 
 [node name="end" type="Node2D"]
 script = ExtResource("1_4daf2")
@@ -55,3 +56,8 @@ theme_override_fonts/font = ExtResource("3_gj05g")
 theme_override_font_sizes/font_size = 35
 text = "Be wary of misinformation and your role in spreading it! Fact check yourself, use credible sources, and don't contribute to the spread of false info."
 autowrap_mode = 2
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(566, 125)
+scale = Vector2(0.595951, 0.557841)
+texture = ExtResource("3_rjy4x")
