@@ -15,6 +15,15 @@ position = Vector2(151, -118)
 [node name="player" parent="." instance=ExtResource("1_xiauq")]
 position = Vector2(-292, 210)
 
+[node name="Camera2D2" type="Camera2D" parent="player"]
+position = Vector2(-1, -5)
+zoom = Vector2(1.5, 1.5)
+limit_left = -445
+limit_top = -537
+limit_right = 1070
+limit_bottom = 210
+limit_smoothed = true
+
 [node name="background" parent="." instance=ExtResource("1_kagpp")]
 z_index = -1
 

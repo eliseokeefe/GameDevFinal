@@ -1,5 +1,5 @@
 extends CanvasLayer
-@onready var timer := 1
+@onready var timer := 120
 @onready var score := 0 
 @onready var money := 0 
 signal shopPressed 

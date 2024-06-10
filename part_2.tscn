@@ -18,9 +18,20 @@ script = ExtResource("1_1bgbl")
 [node name="player" parent="." instance=ExtResource("2_2nvve")]
 position = Vector2(-477, 185)
 
+[node name="Camera2D2" type="Camera2D" parent="player"]
+position = Vector2(-1, -5)
+zoom = Vector2(1.5, 1.5)
+limit_left = -642
+limit_top = -256
+limit_right = 983
+limit_bottom = 338
+limit_smoothed = true
+
 [node name="Timer_part_2" parent="." instance=ExtResource("4_fgejc")]
 visible = false
 
 [node name="InGameHUD" parent="." instance=ExtResource("6_hcw6h")]
 
 [connection signal="change_score" from="Citizen_Spawner" to="Timer_part_2" method="_on_citizen_spawner_change_score"]
+
+[editable path="background"]
