@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdk425cj4gxhn"]
+[gd_scene load_steps=6 format=3 uid="uid://cdk425cj4gxhn"]
 
 [ext_resource type="Script" path="res://end.gd" id="1_4daf2"]
+[ext_resource type="Texture2D" uid="uid://doh2et0y2n3ee" path="res://start+stop sprites/white.jpg" id="2_ejmsi"]
 [ext_resource type="FontFile" uid="uid://d3syh1pojil66" path="res://PressStart2P.ttf" id="3_gj05g"]
 [ext_resource type="Texture2D" uid="uid://cq8cly42igcne" path="res://title.png" id="3_rjy4x"]
+[ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="5_jgt68"]
 
 [node name="end" type="Node2D"]
 script = ExtResource("1_4daf2")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(570.5, 312.5)
+scale = Vector2(0.903756, 0.681818)
+texture = ExtResource("2_ejmsi")
 
 [node name="change1" type="Label" parent="."]
 offset_left = 273.0
 offset_top = 150.0
 offset_right = 427.0
 offset_bottom = 272.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_gj05g")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
@@ -22,6 +30,7 @@ offset_left = 702.0
 offset_top = 147.0
 offset_right = 878.0
 offset_bottom = 266.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_gj05g")
 theme_override_font_sizes/font_size = 50
 horizontal_alignment = 1
@@ -32,6 +41,7 @@ offset_left = 233.0
 offset_top = 275.0
 offset_right = 470.0
 offset_bottom = 360.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_gj05g")
 text = "people convinced of original information"
 horizontal_alignment = 1
@@ -42,6 +52,7 @@ offset_left = 674.0
 offset_top = 265.0
 offset_right = 911.0
 offset_bottom = 357.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_gj05g")
 text = "people reconvinced to correct and accurate information"
 horizontal_alignment = 1
@@ -52,6 +63,7 @@ offset_left = 93.0
 offset_top = 404.0
 offset_right = 1139.0
 offset_bottom = 629.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_gj05g")
 theme_override_font_sizes/font_size = 35
 text = "Be wary of misinformation and your role in spreading it! Fact check yourself, use credible sources, and don't contribute to the spread of false info."
@@ -61,3 +73,13 @@ autowrap_mode = 2
 position = Vector2(566, 125)
 scale = Vector2(0.595951, 0.557841)
 texture = ExtResource("3_rjy4x")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 0, 0, 1)
+offset_left = 432.0
+offset_top = 135.0
+offset_right = 636.0
+offset_bottom = 221.0
+scale = Vector2(1.2, 1.2)
+theme_override_fonts/font = ExtResource("5_jgt68")
+text = "Play Again"

@@ -25,7 +25,6 @@ limit_bottom = 210
 limit_smoothed = true
 
 [node name="background" parent="." instance=ExtResource("1_kagpp")]
-z_index = -1
 
 [node name="InGameHUD" parent="." instance=ExtResource("5_psffl")]
 
