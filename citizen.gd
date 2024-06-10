@@ -54,8 +54,7 @@ func _on_hurt_box_area_entered(area):
 	elif area.is_in_group("projectiles") and evil:
 		health -= area.damage;
 		flash()
+		$PixelHitSound.play()
 		if health <= 0:
 			$HmmHitSound.play()
 			change_mind_back()
-		else:
-			$PixelHitSound.play()

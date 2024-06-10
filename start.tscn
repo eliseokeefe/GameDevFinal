@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Start.gd" id="1_jyfeq"]
 [ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="2_0r0w8"]
 [ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://start+stop sprites/Screenshot 2024-06-06 at 4.39.24 PM.png" id="2_gmaxi"]
-[ext_resource type="Texture2D" uid="uid://cq8cly42igcne" path="res://title.png" id="4_l06p0"]
+[ext_resource type="Texture2D" uid="uid://civqboirxcalh" path="res://title2.jpeg" id="4_3fclb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h671r"]
 font_size = 21
@@ -55,9 +55,9 @@ position = Vector2(574, 324)
 scale = Vector2(1.00437, 1.03016)
 texture = ExtResource("2_gmaxi")
 
-[node name="Title" type="Sprite2D" parent="."]
-position = Vector2(564, 106)
-scale = Vector2(0.632634, 0.461288)
-texture = ExtResource("4_l06p0")
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(550, 91)
+scale = Vector2(0.392911, 0.301845)
+texture = ExtResource("4_3fclb")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
