@@ -139,6 +139,26 @@ text = "3000"
 [node name="CashSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_ylk84")
 
+[node name="Description" type="Label" parent="."]
+offset_left = 401.0
+offset_top = 203.0
+offset_right = 753.0
+offset_bottom = 226.0
+scale = Vector2(0.976013, 1.16071)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_to6ud")
+text = "Click to buy upgrades!"
+
+[node name="NewUpgradeLabel" type="Label" parent="."]
+offset_left = 283.0
+offset_top = 486.0
+offset_right = 943.0
+offset_bottom = 516.0
+theme_override_colors/font_color = Color(0.964706, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_to6ud")
+theme_override_font_sizes/font_size = 25
+text = "New upgrade available!"
+
 [connection signal="pressed" from="MegaphoneButton" to="." method="_on_megaphone_button_pressed"]
 [connection signal="pressed" from="NewspaperButton" to="." method="_on_newspaper_button_pressed"]
 [connection signal="pressed" from="PhoneButton" to="." method="_on_phone_button_pressed"]

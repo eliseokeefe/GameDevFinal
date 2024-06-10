@@ -2,12 +2,13 @@ extends CanvasLayer
 signal megaphone 
 signal newspaper 
 signal phone 
-
+@onready var newUpgradeLabel = $NewUpgradeLabel
 @onready var inGameHUD = get_node("/root/main/InGameHUD") 
-@onready var sound = $CashSFX
+@onready var sound = $CashSFX 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	hide()
+	hide() 
+	newUpgradeLabel.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,5 +53,14 @@ func _on_in_game_hud_shop_pressed():
 
 func _on_close_button_pressed():
 	hide()  
-	sound.stop()
+	sound.stop() 
+	newUpgradeLabel.set_visible(false)
 	get_tree().paused = false
+
+
+func _on_in_game_hud_auto_pressed():
+	show() 
+	newUpgradeLabel.set_visible(true)  
+	$MoneyLabel.text = "Donations: " + str(inGameHUD.money)
+	get_tree().paused = true 
+	

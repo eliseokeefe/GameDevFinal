@@ -2,11 +2,12 @@ extends CanvasLayer
 @onready var timer
 @onready var score := 0 
 @onready var money := 0  
-@onready var count := 0
+@onready var count := 0 
+signal autoPressed 
 signal shopPressed 
 signal timeUp
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready(): 
 	if get_parent().name == "part_2": 
 		timer = 60 
 		$ShopButton.set_visible(false) 
@@ -19,13 +20,13 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
 	if money == 500 && count == 0: 
-		shopPressed.emit()  
-		count += 1
+		autoPressed.emit()  
+		count += 1 
 	if money == 1500 && count == 1: 
-		shopPressed.emit()
+		autoPressed.emit()
 		count += 1
 	if money == 3000 && count == 2: 
-		shopPressed.emit() 
+		autoPressed.emit() 
 		count += 1
 
 

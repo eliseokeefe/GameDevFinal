@@ -56,6 +56,7 @@ autoplay = true
 script = ExtResource("7_ok73f")
 
 [connection signal="change_score" from="Citizen_Spawner" to="InGameHUD" method="_on_citizen_spawner_change_score"]
+[connection signal="autoPressed" from="InGameHUD" to="ShopGUI" method="_on_in_game_hud_auto_pressed"]
 [connection signal="shopPressed" from="InGameHUD" to="ShopGUI" method="_on_in_game_hud_shop_pressed"]
 [connection signal="timeUp" from="InGameHUD" to="Citizen_Spawner" method="_on_in_game_hud_time_up"]
 [connection signal="timeUp" from="InGameHUD" to="player" method="_on_in_game_hud_time_up"]
