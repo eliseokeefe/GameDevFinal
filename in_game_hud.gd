@@ -1,5 +1,5 @@
 extends CanvasLayer
-@onready var timer := 5
+@onready var timer := 1
 @onready var score := 0 
 @onready var money := 0 
 signal shopPressed 
@@ -8,7 +8,9 @@ signal timeUp
 func _ready():
 	if get_parent().name == "part_2": 
 		timer = 60 
-		
+		$ShopButton.set_visible(false) 
+		$AnimatedSprite2D.set_visible(false) 
+		$DonationLabel.set_visible(false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,7 +37,12 @@ func update_Score():
 	score += 100 
 	money += 100 
 	ScoreManager.score += 1
-	$ScoreLabel.text = str(score)
+	$ScoreLabel.text = str(score) 
+	$DonationLabel.text = "Donations: " + str(money) 
+
+func update_Money(num): 
+	money -= num 
+	$DonationLabel.text = "Donations: " + str(money)
 
 func _on_citizen_spawner_change_score():
 	update_Score()
