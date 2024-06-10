@@ -107,7 +107,7 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_sbn5i")
 theme_override_font_sizes/font_size = 50
-text = "120
+text = "
 "
 
 [node name="ShopButton" type="Button" parent="."]
@@ -132,7 +132,7 @@ offset_right = 127.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_sbn5i")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 20
 text = "Donations: 0"
 
 [connection signal="timeUp" from="." to="." method="_on_time_up"]
