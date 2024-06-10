@@ -22,7 +22,7 @@ func _on_timer_timeout():
 	get_parent().add_child(instance)
 	instance.mind_changed.connect(_on_mind_changed)
 	if citizen_side > 0:
-		instance.position = Vector2(-600,rng.randi_range(-120, 275))
+		instance.position = Vector2(-700,rng.randi_range(-120, 275))
 	else:
 		instance.go_the_other_direction()
 		instance.position = Vector2(1100,rng.randi_range(-120, 275))

@@ -18,6 +18,10 @@ func go_the_other_direction():
 	velocity.x = speed
 	$AnimatedSprite2D.flip_h = true
 
+func flash():
+	var tween: Tween = create_tween()
+	tween.tween_property($AnimatedSprite2D, "modulate:v", 1, 0.25).from(300)
+
 func change_mind():
 	convinced = true
 	mind_changed.emit()
@@ -39,9 +43,18 @@ func _on_timer_timeout():
 func _on_hurt_box_area_entered(area):
 	if area.is_in_group("projectiles") and !convinced:
 		health -= area.damage;
+		flash()
+		$PixelHitSound.play()
 		if health <= 0:
+			$HmmHitSound.play()
 			change_mind()
+		else:
+			$PixelHitSound.play()
 	elif area.is_in_group("projectiles") and evil:
 		health -= area.damage;
+		flash()
 		if health <= 0:
+			$HmmHitSound.play()
 			change_mind_back()
+		else:
+			$PixelHitSound.play()
