@@ -1,8 +1,8 @@
 extends Node
 
 @onready var score = 0
-var score_1
-var score_2 
+var score_1 = 0
+var score_2 = 0
 
 func set_first_score(new_score):
 	score_1 = new_score 
