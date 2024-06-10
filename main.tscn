@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1ottidjlyq6f"]
+[gd_scene load_steps=10 format=3 uid="uid://b1ottidjlyq6f"]
 
 [ext_resource type="PackedScene" uid="uid://cgdw72a4sk4g7" path="res://background.tscn" id="1_kagpp"]
 [ext_resource type="PackedScene" uid="uid://dpr1nnm12irux" path="res://player sprites/player.tscn" id="1_xiauq"]
 [ext_resource type="PackedScene" uid="uid://diwmkx3xr50ls" path="res://citizen_spawner.tscn" id="3_6htow"]
 [ext_resource type="PackedScene" uid="uid://durrr3gny344l" path="res://shop_gui.tscn" id="4_bsiwj"]
+[ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="5_4qu6s"]
 [ext_resource type="PackedScene" uid="uid://cwbjcwu0uae0b" path="res://in_game_hud.tscn" id="5_psffl"]
+[ext_resource type="Script" path="res://Instructions.gd" id="6_bqwlk"]
 [ext_resource type="AudioStream" uid="uid://d1vnllgabeb37" path="res://sound fx/MisterInformation Soundtrack.wav" id="6_okena"]
 [ext_resource type="Script" path="res://AudioStreamPlayer.gd" id="7_ok73f"]
 
@@ -29,6 +31,21 @@ limit_smoothed = true
 [node name="background" parent="." instance=ExtResource("1_kagpp")]
 
 [node name="InGameHUD" parent="." instance=ExtResource("5_psffl")]
+
+[node name="Instructions" type="Label" parent="InGameHUD"]
+modulate = Color(0, 0, 0, 1)
+offset_right = 1160.0
+offset_bottom = 636.0
+theme_override_fonts/font = ExtResource("5_4qu6s")
+theme_override_font_sizes/font_size = 30
+text = "WASD to Move
+Click to spread message
+
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_bqwlk")
 
 [node name="ShopGUI" parent="." instance=ExtResource("4_bsiwj")]
 
