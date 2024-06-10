@@ -17,7 +17,7 @@ theme_override_font_sizes/font_size = 50
 [node name="change2" type="Label" parent="."]
 offset_left = 710.0
 offset_top = 131.0
-offset_right = 872.0
+offset_right = 910.0
 offset_bottom = 250.0
 theme_override_fonts/font = ExtResource("3_gj05g")
 theme_override_font_sizes/font_size = 50
