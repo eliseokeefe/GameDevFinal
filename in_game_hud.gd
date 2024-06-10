@@ -1,7 +1,8 @@
 extends CanvasLayer
 @onready var timer
 @onready var score := 0 
-@onready var money := 0 
+@onready var money := 0  
+@onready var count := 0
 signal shopPressed 
 signal timeUp
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +18,15 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta): 
-	pass
+	if money == 500 && count == 0: 
+		shopPressed.emit()  
+		count += 1
+	if money == 1500 && count == 1: 
+		shopPressed.emit()
+		count += 1
+	if money == 3000 && count == 2: 
+		shopPressed.emit() 
+		count += 1
 
 
 func _on_shop_button_pressed():

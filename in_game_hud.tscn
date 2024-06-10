@@ -135,6 +135,16 @@ theme_override_fonts/font = ExtResource("2_sbn5i")
 theme_override_font_sizes/font_size = 20
 text = "Donations: 0"
 
+[node name="ScoreText" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 532.0
+offset_right = 56.0
+offset_bottom = 555.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sbn5i")
+theme_override_font_sizes/font_size = 30
+text = "Score:"
+
 [connection signal="timeUp" from="." to="." method="_on_time_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
