@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnltk2peqca7t"]
+[gd_scene load_steps=11 format=3 uid="uid://cnltk2peqca7t"]
 
 [ext_resource type="Script" path="res://citizen.gd" id="1_xaaph"]
 [ext_resource type="Texture2D" uid="uid://ch54s6jyplgkr" path="res://player sprites/MainPlayer.png" id="2_h7euu"]
+[ext_resource type="AudioStream" uid="uid://ck61u26rexsjp" path="res://sound fx/610280__brickdeveloper171__retro-hit-sound.wav" id="3_wjx5u"]
+[ext_resource type="AudioStream" uid="uid://cyp7aijop66e8" path="res://sound fx/hmm_sound.mp3" id="4_4uq6e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xskbv"]
 atlas = ExtResource("2_h7euu")
@@ -69,6 +71,14 @@ shape = SubResource("CapsuleShape2D_3dp5k")
 wait_time = 45.0
 one_shot = true
 autostart = true
+
+[node name="PixelHitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wjx5u")
+volume_db = -15.0
+
+[node name="HmmHitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_4uq6e")
+volume_db = -10.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]
