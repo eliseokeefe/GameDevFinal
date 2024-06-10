@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://durrr3gny344l"]
+[gd_scene load_steps=17 format=3 uid="uid://durrr3gny344l"]
 
 [ext_resource type="Script" path="res://shop_gui.gd" id="1_37cko"]
 [ext_resource type="Texture2D" uid="uid://dwj5ut2b8ajp7" path="res://ShopSprites/white-background.png" id="1_74g6o"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://caamnf0dfx0av" path="res://ShopSprites/100Kpts.png" id="12_jvg70"]
 [ext_resource type="Texture2D" uid="uid://cg7badwov3r2k" path="res://ShopSprites/ShopXButton.png" id="13_kgiux"]
 [ext_resource type="FontFile" uid="uid://d3syh1pojil66" path="res://PressStart2P.ttf" id="14_to6ud"]
+[ext_resource type="AudioStream" uid="uid://r5ei84f1pw03" path="res://cha-ching-7053.mp3" id="16_mejov"]
 
 [node name="ShopGUI" type="CanvasLayer"]
 process_mode = 2
@@ -134,6 +135,9 @@ offset_bottom = 482.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_b63wd")
 text = "3000"
+
+[node name="CashSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_mejov")
 
 [connection signal="pressed" from="MegaphoneButton" to="." method="_on_megaphone_button_pressed"]
 [connection signal="pressed" from="NewspaperButton" to="." method="_on_newspaper_button_pressed"]
