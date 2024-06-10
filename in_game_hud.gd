@@ -1,5 +1,5 @@
 extends CanvasLayer
-@onready var timer := 120
+@onready var timer
 @onready var score := 0 
 @onready var money := 0 
 signal shopPressed 
@@ -10,7 +10,9 @@ func _ready():
 		timer = 60 
 		$ShopButton.set_visible(false) 
 		$AnimatedSprite2D.set_visible(false) 
-		$DonationLabel.set_visible(false)
+		$DonationLabel.set_visible(false) 
+	else: 
+		timer = 120
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
