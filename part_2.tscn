@@ -33,5 +33,6 @@ visible = false
 [node name="InGameHUD" parent="." instance=ExtResource("6_hcw6h")]
 
 [connection signal="change_score" from="Citizen_Spawner" to="Timer_part_2" method="_on_citizen_spawner_change_score"]
+[connection signal="change_score" from="Citizen_Spawner" to="InGameHUD" method="_on_citizen_spawner_change_score"]
 
 [editable path="background"]

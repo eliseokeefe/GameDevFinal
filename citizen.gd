@@ -33,9 +33,10 @@ func change_mind_back():
 	$AnimatedSprite2D.modulate = Color(1, 1, 1)
 
 func citizen_evil_now():
-	change_mind()
 	health = 200
 	evil = true
+	convinced = true
+	$AnimatedSprite2D.modulate = Color(1, 1, 0)
 
 func _on_timer_timeout():
 	queue_free()
