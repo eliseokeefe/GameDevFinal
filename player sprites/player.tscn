@@ -78,15 +78,6 @@ frame_progress = 0.513038
 position = Vector2(-1, -5)
 shape = SubResource("CircleShape2D_t63jj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, -5)
-zoom = Vector2(1.5, 1.5)
-limit_left = -445
-limit_top = -537
-limit_right = 1070
-limit_bottom = 210
-limit_smoothed = true
-
 [node name="Marker2D" type="Marker2D" parent="."]
 visible = false
 position = Vector2(174, -1)
