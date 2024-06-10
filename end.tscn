@@ -75,7 +75,7 @@ scale = Vector2(0.595951, 0.557841)
 texture = ExtResource("3_rjy4x")
 
 [node name="Button" type="Button" parent="."]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.294631, 1.61298e-05, 8.39882e-06, 1)
 offset_left = 432.0
 offset_top = 135.0
 offset_right = 636.0
@@ -83,3 +83,5 @@ offset_bottom = 221.0
 scale = Vector2(1.2, 1.2)
 theme_override_fonts/font = ExtResource("5_jgt68")
 text = "Play Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bofqvgiranpac"]
+[gd_scene load_steps=7 format=3 uid="uid://bofqvgiranpac"]
 
 [ext_resource type="Script" path="res://Start.gd" id="1_jyfeq"]
 [ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="2_0r0w8"]
 [ext_resource type="Texture2D" uid="uid://c7i1m4025n0ga" path="res://start+stop sprites/Screenshot 2024-06-06 at 4.39.24 PM.png" id="2_gmaxi"]
+[ext_resource type="Texture2D" uid="uid://doh2et0y2n3ee" path="res://start+stop sprites/white.jpg" id="2_xm7lo"]
 [ext_resource type="Texture2D" uid="uid://civqboirxcalh" path="res://title2.jpeg" id="4_3fclb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h671r"]
@@ -17,6 +18,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jyfeq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(579.5, 77.5)
+scale = Vector2(0.913146, 0.182828)
+texture = ExtResource("2_xm7lo")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
