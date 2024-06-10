@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://caamnf0dfx0av" path="res://ShopSprites/100Kpts.png" id="12_jvg70"]
 [ext_resource type="Texture2D" uid="uid://cg7badwov3r2k" path="res://ShopSprites/ShopXButton.png" id="13_kgiux"]
 [ext_resource type="FontFile" uid="uid://d3syh1pojil66" path="res://PressStart2P.ttf" id="14_to6ud"]
-[ext_resource type="AudioStream" uid="uid://r5ei84f1pw03" path="res://cha-ching-7053.mp3" id="16_mejov"]
+[ext_resource type="AudioStream" uid="uid://r5ei84f1pw03" path="res://sound fx/cha-ching-7053.mp3" id="16_ylk84"]
 
 [node name="ShopGUI" type="CanvasLayer"]
 process_mode = 2
@@ -137,7 +137,7 @@ theme_override_fonts/font = ExtResource("10_b63wd")
 text = "3000"
 
 [node name="CashSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("16_mejov")
+stream = ExtResource("16_ylk84")
 
 [connection signal="pressed" from="MegaphoneButton" to="." method="_on_megaphone_button_pressed"]
 [connection signal="pressed" from="NewspaperButton" to="." method="_on_newspaper_button_pressed"]
