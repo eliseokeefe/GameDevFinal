@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dpr1nnm12irux" path="res://player sprites/player.tscn" id="1_xiauq"]
 [ext_resource type="PackedScene" uid="uid://diwmkx3xr50ls" path="res://citizen_spawner.tscn" id="3_6htow"]
 [ext_resource type="PackedScene" uid="uid://durrr3gny344l" path="res://shop_gui.tscn" id="4_bsiwj"]
-[ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="5_4qu6s"]
+[ext_resource type="FontVariation" path="res://PressStart.tres" id="5_4qu6s"]
 [ext_resource type="PackedScene" uid="uid://cwbjcwu0uae0b" path="res://in_game_hud.tscn" id="5_psffl"]
 [ext_resource type="Script" path="res://Instructions.gd" id="6_bqwlk"]
 [ext_resource type="AudioStream" uid="uid://d1vnllgabeb37" path="res://sound fx/MisterInformation Soundtrack.wav" id="6_okena"]

@@ -93,6 +93,16 @@ theme_override_fonts/font = ExtResource("2_sbn5i")
 theme_override_font_sizes/font_size = 50
 text = "0"
 
+[node name="ScoreText" type="Label" parent="ScoreLabel"]
+offset_left = 8.0
+offset_top = -47.0
+offset_right = 188.0
+offset_bottom = -17.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sbn5i")
+theme_override_font_sizes/font_size = 30
+text = "Score:"
+
 [node name="TimerLabel" type="Label" parent="."]
 anchors_preset = 7
 anchor_left = 0.5
@@ -134,16 +144,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_sbn5i")
 theme_override_font_sizes/font_size = 20
 text = "Donations: 0"
-
-[node name="ScoreText" type="Label" parent="."]
-offset_left = 8.0
-offset_top = 532.0
-offset_right = 56.0
-offset_bottom = 555.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_sbn5i")
-theme_override_font_sizes/font_size = 30
-text = "Score:"
 
 [connection signal="timeUp" from="." to="." method="_on_time_up"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
