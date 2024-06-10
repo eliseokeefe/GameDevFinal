@@ -38,3 +38,5 @@ z_index = -1
 [connection signal="megaphone" from="ShopGUI" to="player" method="_on_shop_gui_megaphone"]
 [connection signal="newspaper" from="ShopGUI" to="player" method="_on_shop_gui_newspaper"]
 [connection signal="phone" from="ShopGUI" to="player" method="_on_shop_gui_phone"]
+
+[editable path="background"]

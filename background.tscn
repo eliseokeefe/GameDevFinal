@@ -5469,6 +5469,7 @@ sources/2 = SubResource("TileSetAtlasSource_qwlfu")
 sources/3 = SubResource("TileSetAtlasSource_ihjun")
 
 [node name="background" type="Node2D"]
+z_index = -1
 position = Vector2(18, -87)
 
 [node name="TileMap" type="TileMap" parent="."]
