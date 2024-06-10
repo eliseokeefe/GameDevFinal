@@ -1,12 +1,14 @@
 extends CanvasLayer
-@onready var timer := 120
+@onready var timer := 5
 @onready var score := 0 
-@onready var money := 0
+@onready var money := 0 
 signal shopPressed 
 signal timeUp
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	if get_parent().name == "part_2": 
+		timer = 60 
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,9 +21,12 @@ func _on_shop_button_pressed():
 
 
 func _on_timer_timeout():   
-	if timer == 0: 
+	if timer == 0 && get_parent().name != "part_2": 
 		timeUp.emit() 
 		get_tree().change_scene_to_file("res://popup.tscn")  
+		return 
+	elif timer == 0 && get_parent().name == "part_2":
+		get_tree().change_scene_to_file("res://end.tscn") 
 		return
 	timer -= 1
 	$TimerLabel.text = str(timer) 
