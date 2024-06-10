@@ -7,20 +7,24 @@
 script = ExtResource("1_4daf2")
 
 [node name="change1" type="Label" parent="."]
-offset_left = 263.0
-offset_top = 133.0
-offset_right = 417.0
-offset_bottom = 255.0
+offset_left = 273.0
+offset_top = 150.0
+offset_right = 427.0
+offset_bottom = 272.0
 theme_override_fonts/font = ExtResource("3_gj05g")
 theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="change2" type="Label" parent="."]
-offset_left = 710.0
-offset_top = 131.0
-offset_right = 910.0
-offset_bottom = 250.0
+offset_left = 702.0
+offset_top = 147.0
+offset_right = 878.0
+offset_bottom = 266.0
 theme_override_fonts/font = ExtResource("3_gj05g")
 theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 offset_left = 233.0

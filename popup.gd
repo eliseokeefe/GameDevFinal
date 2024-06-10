@@ -1,5 +1,5 @@
 extends Control
-@onready var score_label := $ScoreLabel
+#@onready var score_label := $ScoreLabel
 
 
 func _on_button_pressed():

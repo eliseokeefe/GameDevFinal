@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var score_label := $ScoreLabel
+#@onready var score_label := $ScoreLabel
 
-func _on_ready():
+func _ready():
 	$change1.text = str(ScoreManager.score)
-	$change2.text = "0"
+	$change2.text = str(ScoreManager.score_1/100)
