@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://doh2et0y2n3ee" path="res://start+stop sprites/white.jpg" id="2_ejmsi"]
 [ext_resource type="FontFile" uid="uid://d3syh1pojil66" path="res://PressStart2P.ttf" id="3_gj05g"]
 [ext_resource type="Texture2D" uid="uid://cq8cly42igcne" path="res://title.png" id="3_rjy4x"]
-[ext_resource type="FontVariation" path="res://PressStart.tres" id="5_jgt68"]
+[ext_resource type="FontVariation" uid="uid://dp5ibsgsljx18" path="res://PressStart.tres" id="5_jgt68"]
 
 [node name="end" type="Node2D"]
 script = ExtResource("1_4daf2")
