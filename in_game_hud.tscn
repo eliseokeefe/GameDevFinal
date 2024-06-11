@@ -94,6 +94,7 @@ theme_override_font_sizes/font_size = 50
 text = "0"
 
 [node name="ScoreText" type="Label" parent="ScoreLabel"]
+layout_mode = 0
 offset_left = 8.0
 offset_top = -47.0
 offset_right = 188.0

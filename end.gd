@@ -1,5 +1,6 @@
 extends Node2D
 
+var speech = preload("res://player sprites/speech.tscn")
 
 #@onready var inGameHUD = get_node("/root/end/InGameHUD")
 #@onready var score_label := $ScoreLabel
@@ -20,4 +21,6 @@ func _ready():
 
 
 func _on_button_pressed():
+	Global.set_powerup(speech)
+	Global.set_color( Color(1.0, 1.0, 0, 1.0))
 	get_tree().change_scene_to_file("res://start.tscn")
